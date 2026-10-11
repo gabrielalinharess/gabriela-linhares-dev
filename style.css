@@ -1,0 +1,638 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#ffffff;
+}
+
+/* CABEÇALHO */
+
+header{
+    background:#0b0b0b;
+    height:100px;
+    display:flex;
+    align-items:center;
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+.marca h1{
+    color:#ffffff;
+    font-size:36px;
+    font-weight:700;
+    margin:0;
+}
+
+.marca p{
+    color:#D4AF37;
+    margin-top:6px;
+    font-size:15px;
+    letter-spacing:1px;
+}
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:#D4AF37;
+    text-decoration:none;
+    margin-left:35px;
+    font-size:17px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffffff;
+}
+
+/* HERO */
+
+.hero{
+    margin-top:100px;
+
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+               url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+.hero-conteudo{
+    width: 520px;
+    margin-left: 8%;
+    background: rgba(0,0,0,0.70);
+    border: 1px solid #D4AF37;
+    border-radius: 18px;
+    padding: 40px;
+    backdrop-filter: blur(8px);
+}
+
+.hero-conteudo h2{
+    color: white;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-conteudo p{
+    color: #d8d8d8;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.botao,
+.botao-whatsapp{
+    display: inline-block;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.botao{
+    background:#D4AF37;
+    color:#111;
+    animation:pulsar 2s infinite;
+}
+
+.botao-whatsapp{
+    background: #25D366;
+    color: white;
+}
+
+.botao:hover,
+.botao-whatsapp:hover{
+    transform: translateY(-3px);
+    transition: .3s;
+}
+/* IMÓVEIS */
+
+.imoveis{
+    scroll-margin-top: 120px;
+    padding:80px 8%;
+    background:#111;
+}
+
+.imoveis h2{
+    color:#D4AF37;
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+}
+
+.card{
+    background:#1b1b1b;
+    width:350px;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.card h3{
+    color:white;
+    padding:20px 20px 10px;
+}
+
+.card p{
+    color:#d4af37;
+    padding:0 20px 20px;
+}
+
+.card a{
+    display:inline-block;
+    margin:0 20px 20px;
+    color:#111;
+    background:#D4AF37;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+/* SOBRE */
+
+.sobre{
+    scroll-margin-top: 120px;
+
+    background:#181818;
+    padding:90px 8%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:70px;
+}
+
+.sobre-foto img{
+    width: 320px;
+    height: 480px;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 16px;
+    border: 3px solid #D4AF37;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.sobre-texto{
+    max-width:550px;
+}
+
+.sobre-texto h2{
+    color:#ffffff;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.sobre-texto p{
+    color:#d8d8d8;
+    line-height:1.8;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+.logo-hero{
+    position:absolute;
+    right:5%;
+    top:50%;
+    transform:translateY(-50%);
+    width:430px;
+    opacity:0.38;
+    z-index:2;
+    filter:
+        drop-shadow(0 0 30px rgba(0,0,0,.95))
+        drop-shadow(0 0 60px rgba(0,0,0,.90));
+}
+
+.logo-hero::before{
+    content:"";
+    position:absolute;
+    inset:-40px;
+    background:radial-gradient(circle, rgba(0,0,0,.45), transparent 70%);
+    z-index:-1;
+}
+
+.logo-hero{
+    position:absolute;
+    right:5%;
+    top:50%;
+    transform:translateY(-50%);
+    width:430px;
+    opacity:0.35;
+    padding:50px;
+    background:radial-gradient(circle, rgba(0,0,0,.75) 0%, rgba(0,0,0,.45) 50%, transparent 80%);
+    border-radius:50%;
+    z-index:2;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ========================= */
+/* RODAPÉ */
+/* ========================= */
+
+footer{
+    background:#0b0b0b;
+    color:#ffffff;
+    padding:60px 8%;
+    text-align:center;
+    border-top:2px solid #D4AF37;
+}
+
+.footer-container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.footer-container h2{
+    color:#D4AF37;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.footer-container p{
+    color:#d8d8d8;
+    margin:12px 0;
+    font-size:17px;
+}
+
+.footer-contato{
+    margin:35px 0;
+    line-height:2.2;
+}
+
+.footer-contato a{
+    color:#D4AF37;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer-contato a:hover{
+    color:#ffffff;
+}
+
+.direitos{
+    margin-top:35px;
+    padding-top:20px;
+    border-top:1px solid #333;
+    color:#888;
+    font-size:14px;
+}
+
+/* CONTRATOS */
+
+.contratos{
+    background:#181818;
+    padding:90px 8%;
+}
+
+.contratos h2{
+    text-align:center;
+    color:#D4AF37;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.texto-contratos{
+    text-align:center;
+    color:#d8d8d8;
+    max-width:800px;
+    margin:0 auto 50px;
+    line-height:1.8;
+}
+
+details{
+    background:#222;
+    margin-bottom:18px;
+    border-radius:12px;
+    border:1px solid #333;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+
+details:hover{
+    border-color:#D4AF37;
+    transform:translateY(-5px);
+}
+
+
+details[open]{
+    border-color:#D4AF37;
+}
+
+summary{
+    padding:20px;
+    color:#D4AF37;
+    cursor:pointer;
+    font-size:20px;
+    font-weight:bold;
+}
+
+details ul{
+    padding:0 40px 25px;
+    color:#fff;
+    line-height:2;
+}
+
+.duvidas{
+    background:#111;
+    padding:90px 8%;
+    text-align:center;
+}
+
+.duvidas h2{
+    color:#ffffff;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.duvidas p{
+    color:#d8d8d8;
+    max-width:700px;
+    margin:0 auto 35px;
+    line-height:1.8;
+}
+
+/* PÁGINA DE CONTRATOS */
+
+.pagina-contrato{
+    padding-top:160px;
+}
+.contrato-whatsapp{
+    text-align:center;
+    margin-top:50px;
+}
+
+
+.contrato-whatsapp a{
+    display:inline-block;
+    background:#D4AF37;
+    color:#111;
+    padding:15px 30px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    transition:.3s;
+}
+
+
+.contrato-whatsapp a:hover{
+    transform:translateY(-5px);
+    background:#ffffff;
+}
+
+/* BOTÃO WHATSAPP CONTRATOS */
+
+.contrato-whatsapp{
+    text-align:center;
+    margin-top:50px;
+}
+
+.contrato-whatsapp a{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:#25D366;
+    color:white;
+    padding:15px 30px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    transition:.3s;
+    animation:pulsar 2s infinite;
+}
+
+
+.whatsapp-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:32px;
+    height:32px;
+    background:white;
+    color:#25D366;
+    border-radius:50%;
+    font-size:18px;
+}
+
+
+.contrato-whatsapp a:hover{
+    transform:translateY(-5px);
+}
+
+
+@keyframes pulsar{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* ========================= */
+/* RESPONSIVIDADE (MOBILE E TABLETS) */
+/* ========================= */
+
+@media (max-width: 768px) {
+    /* CABEÇALHO */
+    header {
+        height: auto;
+        padding: 20px 0;
+    }
+    
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin: 0 10px;
+        font-size: 15px;
+    }
+
+    /* HERO (Idêntico ao notebook, porém em escala menor) */
+    .hero {
+        margin-top: 100px;
+        height: 85vh; /* Altura da tela */
+        display: flex;
+        align-items: flex-end; /* Empurra a caixa para baixo para não cobrir a casa */
+        padding-bottom: 40px; /* Dá um espaço do fundo */
+        position: relative; /* Necessário para a logo flutuante */
+    }
+
+    .hero-conteudo {
+        width: 90%;
+        margin-left: 5%; /* Alinhado à esquerda como no notebook */
+        padding: 20px; /* Caixa mais compacta */
+        background: rgba(0,0,0,0.85);
+        border: 1px solid #D4AF37;
+        border-radius: 12px;
+        text-align: left; /* Texto à esquerda como no notebook */
+        z-index: 10; /* Fica acima da logo */
+    }
+
+    .hero-conteudo h2 {
+        font-size: 22px; /* Fonte menor */
+        margin-bottom: 10px;
+    }
+    
+    .hero-conteudo p {
+        font-size: 14px; /* Fonte menor */
+        margin-bottom: 15px;
+    }
+
+    .botao, .botao-whatsapp {
+        display: inline-block; /* Botões lado a lado como no notebook */
+        width: auto;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    .logo-hero {
+        display: block;
+        position: absolute; 
+        left: 50%; /* Centraliza na tela */
+        top: 40%; /* Posiciona na parte de cima/meio */
+        transform: translate(-50%, -50%); /* Ajuste fino do centro */
+        width: 250px; /* Tamanho um pouco maior já que está no meio */
+        opacity: 0.35; 
+        padding: 30px;
+        background: radial-gradient(circle, rgba(0,0,0,.75) 0%, rgba(0,0,0,.45) 50%, transparent 80%);
+        border-radius: 50%;
+        z-index: 1; 
+    }
+
+    /* SOBRE */
+    .sobre {
+        flex-direction: column;
+        gap: 30px;
+        padding: 60px 5%;
+        text-align: center;
+    }
+
+    .sobre-foto img {
+        width: 260px;
+        height: 390px;
+        margin: 0 auto;
+    }
+
+    .sobre-texto h2 {
+        font-size: 30px;
+    }
+    
+    .sobre-texto p {
+        font-size: 16px;
+    }
+
+    /* IMÓVEIS */
+    .imoveis {
+        padding: 60px 5%;
+    }
+
+    .imoveis h2 {
+        font-size: 32px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    /* CONTRATOS */
+    .contratos {
+        padding: 60px 5%;
+    }
+    
+    .contratos h2 {
+        font-size: 30px;
+    }
+
+    .texto-contratos {
+        font-size: 16px;
+    }
+
+    summary {
+        font-size: 17px;
+    }
+    
+    details ul {
+        font-size: 15px;
+        padding: 0 20px 20px;
+    }
+    
+    .pagina-contrato {
+        padding-top: 180px;
+    }
+    
+    /* RODAPÉ */
+    .footer-container h2 {
+        font-size: 28px;
+    }
+}
